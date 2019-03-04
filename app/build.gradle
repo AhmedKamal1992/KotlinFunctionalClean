@@ -44,6 +44,9 @@ dependencies {
     def developmentDependencies = rootProject.ext.development
 
     //Compile time dependencies
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
     kapt applicationDependencies.archComponentsCompiler
     kapt applicationDependencies.daggerCompiler
     compileOnly applicationDependencies.javaxAnnotation
