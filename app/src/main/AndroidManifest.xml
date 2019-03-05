@@ -11,6 +11,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".features.login.LoginActivity">
+        </activity>
         <activity
                 android:name=".core.platform.BaseActivity"
                 android:label="@string/title_activity_base"

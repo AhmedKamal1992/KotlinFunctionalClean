@@ -1,4 +1,6 @@
 package de.conlance.kotlinclean
 
-class AndroidApplication {
+import android.app.Application
+
+class AndroidApplication: Application() {
 }

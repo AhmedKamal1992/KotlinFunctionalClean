@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import de.conlance.kotlinclean.core.platform.BaseActivity
 import de.conlance.kotlinclean.core.platform.BaseFragment
-import kotlinx.android.synthetic.main.content_base.*
+import kotlinx.android.synthetic.main.activity_base.*
 
 inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> FragmentTransaction) =
     beginTransaction().func().commit()
@@ -22,5 +22,5 @@ inline fun <reified T: ViewModel> Fragment.viewModel(factory: ViewModelProvider.
 }
 
 fun BaseFragment.close() = fragmentManager?.popBackStack()
-val BaseFragment.viewContainer: View get() = (activity as BaseActivity).fragment_container
+val BaseFragment.viewContainer: View get() = (activity as BaseActivity).fragmentContainer
 val BaseFragment.appContext: Context get() = activity?.applicationContext!!
