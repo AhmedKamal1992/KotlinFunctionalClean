@@ -18,6 +18,8 @@ android {
         testInstrumentationRunner config["test_runner"]
     }
 
+    dataBinding.enabled = true
+
     packagingOptions {
         exclude 'LICENSE.txt'
         exclude 'META-INF/DEPENDENCIES'
