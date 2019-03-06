@@ -46,7 +46,7 @@ abstract class BaseFragment: Fragment() {
     internal fun notifiyWithAction(@StringRes message: Int, @StringRes actionText: Int, action: () -> Any) {
         val snackbar = Snackbar.make(viewContainer, message, Snackbar.LENGTH_INDEFINITE)
         snackbar.setAction(actionText) { action.invoke() }
-        snackbar.setActionTextColor(ContextCompat.getColor(appContext, R.color.white))
+        snackbar.setActionTextColor(ContextCompat.getColor(appContext, R.color.colorTextPrimary))
         snackbar.show()
     }
 }
