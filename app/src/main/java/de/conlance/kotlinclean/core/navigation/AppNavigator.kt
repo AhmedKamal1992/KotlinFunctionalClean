@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentActivity
 import de.conlance.kotlinclean.features.MovieView
 import de.conlance.kotlinclean.features.login.Authenticator
 import de.conlance.kotlinclean.features.login.LoginActivity
-import de.conlance.kotlinclean.features.movies.MoviesActivity
+import de.conlance.kotlinclean.features.movies.moviesList.MoviesActivity
 import de.conlance.kotlinclean.features.movies.moviesDetails.views.MovieDetailsActivity
 import javax.inject.Inject
 import javax.inject.Singleton

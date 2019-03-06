@@ -14,6 +14,12 @@ class AndroidApplication: Application() {
             .build()
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        injectMembers()
+        initializeLeakDetection()
+    }
+
     private fun injectMembers() = appComponent.inject(this)
 
     private fun initializeLeakDetection() {

@@ -1,4 +1,4 @@
-package de.conlance.kotlinclean.features.movies
+package de.conlance.kotlinclean.features.movies.moviesList
 
 import android.content.Context
 import android.content.Intent

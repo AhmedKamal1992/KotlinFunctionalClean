@@ -18,7 +18,7 @@
 
         <activity android:name=".features.movies.moviesDetails.views.MovieDetailsActivity"/>
 
-        <activity android:name=".features.movies.MoviesActivity"/>
+        <activity android:name=".features.movies.moviesList.MoviesActivity"/>
 
         <activity android:name=".features.login.LoginActivity">
         </activity>
