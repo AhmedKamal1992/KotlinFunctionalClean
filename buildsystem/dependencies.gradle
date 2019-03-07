@@ -18,6 +18,7 @@ ext {
   javaxAnnotations_version = '1.0'
   javaxInject_version = '1'
   retrofit_version = '2.3.0'
+  retrofit_coroutines_version = '0.9.2'
   okhttp_logging_interceptor_version = '3.8.1'
 
   //Unit Testing
@@ -51,6 +52,7 @@ ext {
       javaxAnnotation:            "javax.annotation:jsr250-api:$javaxAnnotations_version",
       javaxInject:                "javax.inject:javax.inject:$javaxInject_version",
       retrofit:                   "com.squareup.retrofit2:converter-gson:$retrofit_version",
+      retrofitCoroutines:         "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofit_coroutines_version",
       okhttpLoggingInterceptor:   "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_interceptor_version",
   ]
 

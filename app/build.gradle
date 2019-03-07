@@ -65,6 +65,7 @@ dependencies {
     implementation applicationDependencies.glide
     implementation applicationDependencies.dagger
     implementation applicationDependencies.retrofit
+    implementation applicationDependencies.retrofitCoroutines
     implementation applicationDependencies.okhttpLoggingInterceptor
 
     //Unit/Integration tests dependencies
