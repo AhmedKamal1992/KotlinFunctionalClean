@@ -1,4 +1,4 @@
-package de.conlance.kotlinclean.features.movies
+package de.conlance.kotlinclean.features.movies.moviesDetails.entities
 
 import android.os.Parcel
 import de.conlance.kotlinclean.core.platform.KParcelable

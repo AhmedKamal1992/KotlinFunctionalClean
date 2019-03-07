@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import de.conlance.kotlinclean.R
-import de.conlance.kotlinclean.features.movies.MovieView
+import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
 
 class MovieDetailsActivity : AppCompatActivity() {
 

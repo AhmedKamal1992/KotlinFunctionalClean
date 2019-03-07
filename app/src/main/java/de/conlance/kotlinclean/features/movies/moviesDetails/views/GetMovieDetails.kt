@@ -12,6 +12,7 @@ import javax.inject.Named
 
 class GetMovieDetails @Inject constructor(private val moviesRepository: MoviesRepository, @Named("UseCaseScope")
     scope: CoroutineScope, @Named("UseCaseDispatchers") dispatcher: CoroutineDispatcher) :UseCase<MovieDetails, Params>(scope, dispatcher) {
+
     override suspend fun run(params: Params): Either<Failure, MovieDetails> = moviesRepository.movieDetails(params.id)
 }
 

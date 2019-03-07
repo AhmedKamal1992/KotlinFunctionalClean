@@ -3,7 +3,7 @@ package de.conlance.kotlinclean.features.movies.moviesList.views
 import androidx.lifecycle.MutableLiveData
 import de.conlance.kotlinclean.core.interactor.UseCase
 import de.conlance.kotlinclean.core.platform.BaseViewModel
-import de.conlance.kotlinclean.features.movies.MovieView
+import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
 import de.conlance.kotlinclean.features.movies.moviesList.GetMoviesUseCase
 import de.conlance.kotlinclean.features.movies.moviesList.entities.Movie
 import javax.inject.Inject
@@ -15,6 +15,11 @@ class MoviesViewModel @Inject constructor(private val getMoviesUseCase: GetMovie
     fun loadMovies() = getMoviesUseCase(UseCase.None()) { it.either(::handleFailure, ::handleMovieList) }
 
     private fun handleMovieList(movies: List<Movie>) {
-        this.moviesMutable.value = movies.map { MovieView(it.id, it.poster) }
+        this.moviesMutable.value = movies.map {
+            MovieView(
+                it.id,
+                it.poster
+            )
+        }
     }
 }

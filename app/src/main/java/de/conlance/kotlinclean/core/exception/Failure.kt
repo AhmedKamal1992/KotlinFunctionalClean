@@ -6,7 +6,7 @@ package de.conlance.kotlinclean.core.exception
 **/
 sealed class Failure {
     object NetworkConnection: Failure()
-    object serverError: Failure()
+    object ServerError: Failure()
 
     abstract class FeatureFailure:Failure()
 }

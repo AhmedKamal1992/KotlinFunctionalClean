@@ -36,10 +36,10 @@ interface MoviesRepository {
             val response = call.execute()
             when(response.isSuccessful) {
                 true -> Either.Right(transform(response.body() ?: default))
-                false -> Either.Left(Failure.serverError)
+                false -> Either.Left(Failure.ServerError)
             }
         } catch (exception: Throwable) {
-            Either.Left(Failure.serverError)
+            Either.Left(Failure.ServerError)
         }
     }
 }

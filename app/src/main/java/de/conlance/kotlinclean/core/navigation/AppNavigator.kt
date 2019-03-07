@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.FragmentActivity
-import de.conlance.kotlinclean.features.movies.MovieView
+import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
 import de.conlance.kotlinclean.features.login.Authenticator
 import de.conlance.kotlinclean.features.login.LoginActivity
 import de.conlance.kotlinclean.features.movies.moviesList.MoviesActivity

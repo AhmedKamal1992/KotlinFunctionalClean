@@ -9,7 +9,7 @@ import de.conlance.kotlinclean.core.exception.Failure
 import de.conlance.kotlinclean.core.extension.*
 import de.conlance.kotlinclean.core.navigation.AppNavigator
 import de.conlance.kotlinclean.core.platform.BaseFragment
-import de.conlance.kotlinclean.features.movies.MovieView
+import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
 import de.conlance.kotlinclean.features.movies.MovieFailure
 import kotlinx.android.synthetic.main.fragment_movies.*
 import javax.inject.Inject
@@ -61,7 +61,7 @@ class MoviesFragment : BaseFragment() {
     private fun handleFailure(failure: Failure?) {
         when(failure) {
             is Failure.NetworkConnection -> renderFailure(R.string.failure_network_connection)
-            is Failure.serverError -> renderFailure(R.string.failure_server_error)
+            is Failure.ServerError -> renderFailure(R.string.failure_server_error)
             is MovieFailure.ListNotAvailable -> renderFailure(R.string.failure_movies_list_unavailable)
         }
     }

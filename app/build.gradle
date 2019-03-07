@@ -46,6 +46,7 @@ dependencies {
     def developmentDependencies = rootProject.ext.development
 
     //Compile time dependencies
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     kapt applicationDependencies.archComponentsCompiler
     kapt applicationDependencies.daggerCompiler
     compileOnly applicationDependencies.javaxAnnotation
