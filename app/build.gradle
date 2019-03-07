@@ -87,6 +87,4 @@ dependencies {
     debugImplementation developmentDependencies.leakCanary
     releaseImplementation developmentDependencies.leakCanaryNoop
     testImplementation developmentDependencies.leakCanaryNoop
-
-
 }

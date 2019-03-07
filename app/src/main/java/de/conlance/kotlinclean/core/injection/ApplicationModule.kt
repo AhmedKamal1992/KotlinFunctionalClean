@@ -1,6 +1,7 @@
 package de.conlance.kotlinclean.core.injection
 
 import android.content.Context
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import de.conlance.kotlinclean.AndroidApplication
@@ -25,6 +26,7 @@ class ApplicationModule(private val application: AndroidApplication) {
         return Retrofit.Builder()
             .baseUrl("https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/")
             .client(createClient())
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
