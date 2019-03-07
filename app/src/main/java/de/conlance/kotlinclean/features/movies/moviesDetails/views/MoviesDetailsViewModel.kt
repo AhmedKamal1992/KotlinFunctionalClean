@@ -1,4 +1,6 @@
 package de.conlance.kotlinclean.features.movies.moviesDetails.views
 
-class MoviesDetailsViewModel {
+import de.conlance.kotlinclean.core.platform.BaseViewModel
+
+class MoviesDetailsViewModel: BaseViewModel() {
 }

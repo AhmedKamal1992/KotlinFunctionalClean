@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import de.conlance.kotlinclean.features.movies.moviesDetails.views.MoviesDetailsViewModel
 import de.conlance.kotlinclean.features.movies.moviesList.views.MoviesViewModel
 
 @Module
@@ -16,4 +17,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MoviesViewModel::class)
     abstract fun bindServiceViewModel(moviesViewModel: MoviesViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MoviesDetailsViewModel::class)
+    abstract fun bindServiceViewModel(moviesDetailsViewModel: MoviesDetailsViewModel)
 }
