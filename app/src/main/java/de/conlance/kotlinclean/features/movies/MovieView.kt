@@ -1,7 +1,6 @@
-package de.conlance.kotlinclean.features
+package de.conlance.kotlinclean.features.movies
 
 import android.os.Parcel
-import android.os.Parcelable
 import de.conlance.kotlinclean.core.platform.KParcelable
 import de.conlance.kotlinclean.core.platform.parcelableCreator
 

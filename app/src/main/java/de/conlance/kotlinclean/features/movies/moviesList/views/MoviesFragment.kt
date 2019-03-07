@@ -9,7 +9,7 @@ import de.conlance.kotlinclean.core.exception.Failure
 import de.conlance.kotlinclean.core.extension.*
 import de.conlance.kotlinclean.core.navigation.AppNavigator
 import de.conlance.kotlinclean.core.platform.BaseFragment
-import de.conlance.kotlinclean.features.MovieView
+import de.conlance.kotlinclean.features.movies.MovieView
 import de.conlance.kotlinclean.features.movies.MovieFailure
 import kotlinx.android.synthetic.main.fragment_movies.*
 import javax.inject.Inject

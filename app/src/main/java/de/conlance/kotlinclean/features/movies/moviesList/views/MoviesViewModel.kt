@@ -3,7 +3,7 @@ package de.conlance.kotlinclean.features.movies.moviesList.views
 import androidx.lifecycle.MutableLiveData
 import de.conlance.kotlinclean.core.interactor.UseCase
 import de.conlance.kotlinclean.core.platform.BaseViewModel
-import de.conlance.kotlinclean.features.MovieView
+import de.conlance.kotlinclean.features.movies.MovieView
 import de.conlance.kotlinclean.features.movies.moviesList.GetMoviesUseCase
 import de.conlance.kotlinclean.features.movies.moviesList.entities.Movie
 import javax.inject.Inject
