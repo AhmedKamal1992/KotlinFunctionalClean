@@ -8,6 +8,7 @@ import de.conlance.kotlinclean.core.extension.inflate
 import de.conlance.kotlinclean.core.extension.loadFromUrl
 import de.conlance.kotlinclean.core.navigation.AppNavigator
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
+import kotlinx.android.synthetic.main.fragment_movie_details.view.*
 import kotlinx.android.synthetic.main.row_movie.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates
@@ -29,7 +30,7 @@ class MoviesListAdapter @Inject constructor(): RecyclerView.Adapter<MoviesListAd
     class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview) {
         fun bind(movieView: MovieView, clickListener: (MovieView, AppNavigator.Extras) -> Unit) {
             itemView.movie_poster.loadFromUrl(movieView.poster)
-            itemView.setOnClickListener { clickListener(movieView, AppNavigator.Extras(itemView.movie_poster)) }
+            itemView.setOnClickListener { clickListener(movieView, AppNavigator.Extras(itemView.moviePoster)) }
         }
     }
 }

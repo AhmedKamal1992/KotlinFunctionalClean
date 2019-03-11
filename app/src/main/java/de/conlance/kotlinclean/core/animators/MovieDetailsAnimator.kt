@@ -9,8 +9,7 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import de.conlance.kotlinclean.core.extension.cancelTransition
 import javax.inject.Inject
 
-class MovieDetailsAnimator
-@Inject constructor() {
+class MovieDetailsAnimator @Inject constructor() {
 
     private val TRANSITION_DELAY = 200L
     private val TRANSITION_DURATION = 400L
