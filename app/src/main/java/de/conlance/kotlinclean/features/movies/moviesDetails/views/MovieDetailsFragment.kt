@@ -16,6 +16,7 @@ import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetai
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
 import kotlinx.android.synthetic.main.fragment_movie_details.*
 import kotlinx.android.synthetic.main.row_movie.*
+import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
 
@@ -68,7 +69,20 @@ class MovieDetailsFragment : BaseFragment(){
     }
 
     private fun renderMovieDetails(movie: MovieDetailsView?) {
-
+        movie?.let {
+            with(movie) {
+                activity?.let {
+                    movie_poster.loadUrlAndPostponeEnterTransition(poster, it)
+                    it.toolbar.title = title
+                }
+                movieSummary.text = summary
+                movieCast.text = cast
+                movieDirector.text = director
+                movieYear.text = year.toString()
+            }
+        }
+        movieDetailsAnimator.fadeVisible(scrollView, movieDetails)
+        movieDetailsAnimator.scaleUpView(moviePlay)
     }
 
     private fun handleFailure(failure: Failure?) {

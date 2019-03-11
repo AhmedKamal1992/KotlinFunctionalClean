@@ -2,6 +2,7 @@ package de.conlance.kotlinclean.features.movies.moviesDetails.views
 
 import androidx.lifecycle.MutableLiveData
 import de.conlance.kotlinclean.core.platform.BaseViewModel
+import de.conlance.kotlinclean.features.movies.moviesDetails.PlayMovie
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetails
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetailsView
 import javax.inject.Inject

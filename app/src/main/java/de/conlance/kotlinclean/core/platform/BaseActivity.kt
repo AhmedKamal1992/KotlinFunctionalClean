@@ -19,13 +19,13 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         (supportFragmentManager.findFragmentById(
-            id.fragmentContainer) as BaseFragment).onBackPressed()
+            R.id.fragmentContainer) as BaseFragment).onBackPressed()
         super.onBackPressed()
     }
 
     private fun addFragment(savedInstanceState: Bundle?) =
         savedInstanceState ?: supportFragmentManager.inTransaction { add(
-            id.fragmentContainer, fragment()) }
+            R.id.fragmentContainer, fragment()) }
 
     abstract fun fragment(): BaseFragment
 }

@@ -29,7 +29,7 @@ class MoviesListAdapter @Inject constructor(): RecyclerView.Adapter<MoviesListAd
 
     class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview) {
         fun bind(movieView: MovieView, clickListener: (MovieView, AppNavigator.Extras) -> Unit) {
-            itemView.movie_poster.loadFromUrl(movieView.poster)
+            itemView.moviePoster.loadFromUrl(movieView.poster)
             itemView.setOnClickListener { clickListener(movieView, AppNavigator.Extras(itemView.moviePoster)) }
         }
     }
