@@ -3,6 +3,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="movieDetails"
+            type="de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetailsView"/>
+
+    </data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
@@ -57,6 +65,7 @@
                         android:text="@string/movie_details_summary"/>
                 <TextView
                         android:id="@+id/movieSummary"
+                        android:text="@{movieDetails.summary}"
                         style="@style/MovieDetailsText"/>
 
                 <TextView
@@ -64,6 +73,7 @@
                         android:text="@string/movie_details_cast"/>
                 <TextView
                         android:id="@+id/movieCast"
+                        android:text="@{movieDetails.cast}"
                         style="@style/MovieDetailsText"/>
 
                 <TextView
@@ -71,6 +81,7 @@
                         android:text="@string/movie_details_director"/>
                 <TextView
                         android:id="@+id/movieDirector"
+                        android:text="@{movieDetails.director}"
                         style="@style/MovieDetailsText"/>
 
                 <TextView
@@ -78,6 +89,7 @@
                         android:text="@string/movie_details_year"/>
                 <TextView
                         android:id="@+id/movieYear"
+                        android:text="@{movieDetails.year}"
                         style="@style/MovieDetailsText"/>
 
             </LinearLayout>
@@ -97,7 +109,8 @@
                 app:elevation="6dp"
                 app:layout_anchor="@id/appbar"
                 app:layout_anchorGravity="bottom|right"
-                app:fabSize="normal" />
+                app:fabSize="normal"
+                android:focusable="true"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

@@ -11,6 +11,7 @@ import de.conlance.kotlinclean.core.animators.MovieDetailsAnimator
 import de.conlance.kotlinclean.core.exception.Failure
 import de.conlance.kotlinclean.core.extension.*
 import de.conlance.kotlinclean.core.platform.BaseFragment
+import de.conlance.kotlinclean.databinding.FragmentMovieDetailsBinding
 import de.conlance.kotlinclean.features.movies.MovieFailure
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetailsView
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
@@ -69,16 +70,13 @@ class MovieDetailsFragment : BaseFragment(){
     }
 
     private fun renderMovieDetails(movie: MovieDetailsView?) {
+        binding<FragmentMovieDetailsBinding>().setMovieDetails(movie)
         movie?.let {
             with(movie) {
                 activity?.let {
-                    movie_poster.loadUrlAndPostponeEnterTransition(poster, it)
+                    binding<FragmentMovieDetailsBinding>().moviePoster.loadUrlAndPostponeEnterTransition(poster, it)
                     it.toolbar.title = title
                 }
-                movieSummary.text = summary
-                movieCast.text = cast
-                movieDirector.text = director
-                movieYear.text = year.toString()
             }
         }
         movieDetailsAnimator.fadeVisible(scrollView, movieDetails)
