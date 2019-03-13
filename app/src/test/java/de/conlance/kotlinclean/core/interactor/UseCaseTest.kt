@@ -41,7 +41,8 @@ class UseCaseTest: AndroidTest() {
         val params = MyParams(TYPE_PARAM)
         val onResult = { myResult: Either<Failure, MyType> -> result = myResult }
 
-        whenever(runBlocking { useCase(params, onResult) }).then( result shouldEqual Either.Right(MyType()))
+        whenever(runBlocking { useCase(params, onResult) })
+            .then { result shouldEqual Either.Right(MyType(TYPE_TEST)) }
     }
 
     data class MyType(val name: String)
