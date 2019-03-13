@@ -70,11 +70,11 @@ class MovieDetailsFragment : BaseFragment(){
     }
 
     private fun renderMovieDetails(movie: MovieDetailsView?) {
-        binding<FragmentMovieDetailsBinding>().setMovieDetails(movie)
+        (binding as FragmentMovieDetailsBinding).setMovieDetails(movie)
         movie?.let {
             with(movie) {
                 activity?.let {
-                    binding<FragmentMovieDetailsBinding>().moviePoster.loadUrlAndPostponeEnterTransition(poster, it)
+                    (binding as FragmentMovieDetailsBinding).moviePoster.loadUrlAndPostponeEnterTransition(poster, it)
                     it.toolbar.title = title
                 }
             }

@@ -1,7 +1,9 @@
 package de.conlance.kotlinclean.core.extension
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -25,8 +27,9 @@ inline fun <reified T: ViewModel> Fragment.viewModel(factory: ViewModelProvider.
 }
 
 fun BaseFragment.close() = fragmentManager?.popBackStack()
-fun <B: ViewDataBinding> BaseFragment.binding():B {
+fun <B: ViewDataBinding> BaseFragment.binding(container: ViewGroup):B {
     return DataBindingUtil.inflate(layoutInflater, layoutId(), container, false)
 }
+
 val BaseFragment.viewContainer: View get() = (activity as BaseActivity).fragmentContainer
 val BaseFragment.appContext: Context get() = activity?.applicationContext!!
