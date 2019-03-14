@@ -11,7 +11,7 @@ class MoviesDetailsViewModel @Inject constructor(private val getMovieDetails: Ge
 
     var movieDetailsMutable:MutableLiveData<MovieDetailsView> = MutableLiveData()
 
-    fun loadMovieDetails(movieId: Int) = getMovieDetails(Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
+    fun loadMovieDetails(movieId: Int) = getMovieDetails(GetMovieDetails.Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
 
     private fun handleMovieDetails(movie: MovieDetails) {
         this.movieDetailsMutable.value = MovieDetailsView(movie.id, movie.title, movie.poster,
