@@ -75,6 +75,7 @@ dependencies {
     testImplementation unitTestDependencies.robolectric
     testImplementation unitTestDependencies.junit
     testImplementation unitTestDependencies.mockito
+    testImplementation unitTestDependencies.mockitoInline
     testImplementation unitTestDependencies.kluent
 
     //Acceptance tests dependencies

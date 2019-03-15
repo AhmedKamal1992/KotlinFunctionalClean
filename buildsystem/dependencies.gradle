@@ -26,6 +26,7 @@ ext {
   junit_version = '4.12'
   mockito_version = '2.1.0'
   kluent_version = '1.14'
+  test_inline_version = '2.24.5'
 
   //Acceptance Testing
   runner_version = '1.0.2-alpha1'
@@ -63,6 +64,7 @@ ext {
       junit:              "junit:junit:$junit_version",
       mockito:            "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_version",
       kluent:             "org.amshove.kluent:kluent:$kluent_version",
+      mockitoInline:      "org.mockito:mockito-inline:$test_inline_version"
   ]
 
   acceptanceTesting = [
