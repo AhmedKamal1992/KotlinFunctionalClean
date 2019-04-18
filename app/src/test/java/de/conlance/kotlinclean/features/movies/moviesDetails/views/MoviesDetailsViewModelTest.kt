@@ -6,9 +6,7 @@ import de.conlance.kotlinclean.AndroidTest
 import de.conlance.kotlinclean.core.functional.Either
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetails
 import kotlinx.coroutines.runBlocking
-import org.amshove.kluent.mock
 import org.amshove.kluent.shouldEqualTo
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -19,11 +17,11 @@ class MoviesDetailsViewModelTest: AndroidTest() {
     private val movieDetails = MovieDetails(0, "IronMan", "poster", "summary",
         "cast", "director", 2018, "trailer") //Expected value
 
-    @Mock private lateinit var getMovieDetails: GetMovieDetails
+    @Mock private lateinit var movieDetailsImpl: MovieDetailsImpl
 
     @Before fun setup() {
-        getMovieDetails = mock { onBlocking {run(any())}.thenReturn(Either.Right(movieDetails))}
-        viewModel = MoviesDetailsViewModel(getMovieDetails)
+        movieDetailsImpl = mock { onBlocking {run(any())}.thenReturn(Either.Right(movieDetails))}
+        viewModel = MoviesDetailsViewModel(movieDetailsImpl)
     }
 
     @Test fun loadingMovieDetailsShouldUpdateLiveData() {

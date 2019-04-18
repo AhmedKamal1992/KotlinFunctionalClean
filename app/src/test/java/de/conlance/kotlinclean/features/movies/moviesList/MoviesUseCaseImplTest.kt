@@ -11,13 +11,12 @@ import de.conlance.kotlinclean.features.movies.moviesList.entities.Movie
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 
-class GetMoviesUseCaseTest: UnitTest() {
-    private lateinit var getMovies: GetMoviesUseCase
+class MoviesUseCaseImplTest: UnitTest() {
+    private lateinit var moviesImpl: MoviesUseCaseImpl
 
     @Mock
     private lateinit var moviesRepository: MoviesRepository
@@ -30,13 +29,13 @@ class GetMoviesUseCaseTest: UnitTest() {
 
     @Before
     fun setUp() {
-        getMovies = GetMoviesUseCase(moviesRepository, scope, dispatcher)
+        moviesImpl = MoviesUseCaseImpl(moviesRepository, scope, dispatcher)
         given { moviesRepository.movies() }.willReturn(Either.Right(listOf(Movie.empty())))
     }
 
     @Test
     fun `should get data from repository`() {
-        runBlocking { getMovies.run(UseCase.None()) }
+        runBlocking { moviesImpl.run(UseCase.None()) }
 
         verify(moviesRepository).movies()
         verifyNoMoreInteractions(moviesRepository)

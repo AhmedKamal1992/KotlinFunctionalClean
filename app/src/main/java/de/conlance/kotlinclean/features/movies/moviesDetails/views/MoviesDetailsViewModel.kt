@@ -2,16 +2,15 @@ package de.conlance.kotlinclean.features.movies.moviesDetails.views
 
 import androidx.lifecycle.MutableLiveData
 import de.conlance.kotlinclean.core.platform.BaseViewModel
-import de.conlance.kotlinclean.features.movies.moviesDetails.PlayMovie
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetails
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetailsView
 import javax.inject.Inject
 
-class MoviesDetailsViewModel @Inject constructor(private val getMovieDetails: GetMovieDetails): BaseViewModel() {
+class MoviesDetailsViewModel @Inject constructor(private val movieDetailsImpl: MovieDetailsImpl): BaseViewModel() {
 
     var movieDetailsMutable:MutableLiveData<MovieDetailsView> = MutableLiveData()
 
-    fun loadMovieDetails(movieId: Int) = getMovieDetails(GetMovieDetails.Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
+    fun loadMovieDetails(movieId: Int) = movieDetailsImpl(MovieDetailsImpl.Params(movieId)) { it.either(::handleFailure, ::handleMovieDetails) }
 
     private fun handleMovieDetails(movie: MovieDetails) {
         this.movieDetailsMutable.value = MovieDetailsView(movie.id, movie.title, movie.poster,

@@ -6,7 +6,7 @@ import de.conlance.kotlinclean.core.injection.usecase.UseCaseModule
 import de.conlance.kotlinclean.core.injection.viewModel.ViewModelModule
 import de.conlance.kotlinclean.core.navigation.RouteActivity
 import de.conlance.kotlinclean.features.movies.moviesDetails.views.MovieDetailsFragment
-import de.conlance.kotlinclean.features.movies.moviesList.views.MoviesFragment
+import de.conlance.kotlinclean.features.movies.moviesList.presentation.MoviesFragment
 import javax.inject.Singleton
 
 @Singleton

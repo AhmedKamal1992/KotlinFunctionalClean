@@ -10,8 +10,8 @@ import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
 import javax.inject.Named
 
-class GetMovieDetails @Inject constructor(private val moviesRepository: MoviesRepository, @Named("useCaseScope")
-    scope: CoroutineScope, @Named("UseCaseDispatchers") dispatcher: CoroutineDispatcher) :UseCase<MovieDetails, GetMovieDetails.Params>(scope, dispatcher) {
+class MovieDetailsImpl @Inject constructor(private val moviesRepository: MoviesRepository, @Named("useCaseScope")
+    scope: CoroutineScope, @Named("UseCaseDispatchers") dispatcher: CoroutineDispatcher) :UseCase<MovieDetails, MovieDetailsImpl.Params>(scope, dispatcher) {
 
     override suspend fun run(params: Params): Either<Failure, MovieDetails> = moviesRepository.movieDetails(params.id)
 

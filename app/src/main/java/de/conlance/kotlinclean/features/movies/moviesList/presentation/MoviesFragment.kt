@@ -1,4 +1,4 @@
-package de.conlance.kotlinclean.features.movies.moviesList.views
+package de.conlance.kotlinclean.features.movies.moviesList.presentation
 
 import android.os.Bundle
 import android.view.View

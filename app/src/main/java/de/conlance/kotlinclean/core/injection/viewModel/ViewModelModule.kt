@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import de.conlance.kotlinclean.features.movies.moviesDetails.views.MoviesDetailsViewModel
-import de.conlance.kotlinclean.features.movies.moviesList.views.MoviesViewModel
+import de.conlance.kotlinclean.features.movies.moviesList.presentation.MoviesViewModel
 
 @Module
 abstract class ViewModelModule {

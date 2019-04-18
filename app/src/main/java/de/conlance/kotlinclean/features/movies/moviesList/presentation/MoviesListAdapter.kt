@@ -1,4 +1,4 @@
-package de.conlance.kotlinclean.features.movies.moviesList.views
+package de.conlance.kotlinclean.features.movies.moviesList.presentation
 
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +8,6 @@ import de.conlance.kotlinclean.core.extension.inflate
 import de.conlance.kotlinclean.core.extension.loadFromUrl
 import de.conlance.kotlinclean.core.navigation.AppNavigator
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieView
-import kotlinx.android.synthetic.main.fragment_movie_details.view.*
 import kotlinx.android.synthetic.main.row_movie.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates
