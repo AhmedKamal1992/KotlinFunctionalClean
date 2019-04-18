@@ -10,15 +10,14 @@ import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetai
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 
-class GetMovieDetailsTest: UnitTest() {
+class MovieDetailsUseCaseImplTest: UnitTest() {
     private val MOVIE_ID = 2
 
-    private lateinit var getMovieDetails: GetMovieDetails
+    private lateinit var movieDetailsUseCaseImpl: MovieDetailsUseCaseImpl
 
     @Mock lateinit var movieRepository: MoviesRepository
 
@@ -27,12 +26,12 @@ class GetMovieDetailsTest: UnitTest() {
     @Mock private lateinit var dispatcher: CoroutineDispatcher
 
     @Before fun setup() {
-        getMovieDetails = GetMovieDetails(movieRepository, scope, dispatcher)
+        movieDetailsUseCaseImpl = MovieDetailsUseCaseImpl(movieRepository, scope, dispatcher)
         given { movieRepository.movieDetails(MOVIE_ID) }.willReturn(Either.Right(MovieDetails.empty()))
     }
 
     @Test fun shouldGetDataFromRepository() {
-        runBlocking { getMovieDetails.run(GetMovieDetails.Params(MOVIE_ID)) }
+        runBlocking { movieDetailsUseCaseImpl.run(MovieDetailsUseCaseImpl.Params(MOVIE_ID)) }
 
         verify(movieRepository).movieDetails(MOVIE_ID)
         verifyNoMoreInteractions(movieRepository)
