@@ -24,7 +24,7 @@ class ApplicationModule(private val application: AndroidApplication) {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://raw.githubusercontent.com/android10/Sample-Data/master/Android-CleanArchitecture-Kotlin/")
+            .baseUrl("https://bitbucket.org/Ahmed-kamal/kotlinclean/raw/d13fc2c635dea81e6d706c79fbd44e35839a290f/KotlinClean/")
             .client(createClient())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())

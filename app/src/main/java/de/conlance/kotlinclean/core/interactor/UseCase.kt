@@ -16,5 +16,11 @@ abstract class UseCase<out Type, in Params>(private val scope: CoroutineScope, p
         }
     }
 
+    fun onCleared() {
+        if(scope.isActive) {
+            scope.cancel()
+        }
+    }
+
     class None
 }

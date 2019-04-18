@@ -6,7 +6,7 @@ import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetai
 import de.conlance.kotlinclean.features.movies.moviesDetails.entities.MovieDetailsView
 import javax.inject.Inject
 
-class MoviesDetailsViewModel @Inject constructor(private val movieDetailsImpl: MovieDetailsImpl): BaseViewModel() {
+class MoviesDetailsViewModel @Inject constructor(private val movieDetailsImpl: MovieDetailsImpl): BaseViewModel<MovieDetailsImpl>(movieDetailsImpl) {
 
     var movieDetailsMutable:MutableLiveData<MovieDetailsView> = MutableLiveData()
 
