@@ -27,9 +27,9 @@ inline fun <reified T: ViewModel> Fragment.viewModel(factory: ViewModelProvider.
 }
 
 fun BaseFragment.close() = fragmentManager?.popBackStack()
-fun <B: ViewDataBinding> BaseFragment.binding(container: ViewGroup):B {
-    return DataBindingUtil.inflate(layoutInflater, layoutId(), container, false)
-}
+fun <B: ViewDataBinding> BaseFragment.binding(container: ViewGroup):B =
+    DataBindingUtil.inflate(layoutInflater, layoutId(), container, false)
+
 
 val BaseFragment.viewContainer: View get() = (activity as BaseActivity).fragmentContainer
 val BaseFragment.appContext: Context get() = activity?.applicationContext!!

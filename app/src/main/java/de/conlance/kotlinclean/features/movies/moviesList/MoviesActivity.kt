@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import de.conlance.kotlinclean.core.platform.BaseActivity
 import de.conlance.kotlinclean.core.platform.BaseFragment
-import de.conlance.kotlinclean.features.movies.moviesList.views.MoviesFragment
+import de.conlance.kotlinclean.features.movies.moviesList.presentation.MoviesFragment
 
 class MoviesActivity: BaseActivity() {
     companion object {
