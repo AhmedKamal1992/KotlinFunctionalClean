@@ -8,7 +8,7 @@ import de.conlance.kotlinclean.features.movies.moviesList.MoviesUseCaseImpl
 import de.conlance.kotlinclean.features.movies.moviesList.entities.Movie
 import javax.inject.Inject
 
-class MoviesViewModel @Inject constructor(private val moviesUseCaseImpl: MoviesUseCaseImpl): BaseViewModel() {
+class MoviesViewModel @Inject constructor(private val moviesUseCaseImpl: MoviesUseCaseImpl): BaseViewModel<MoviesUseCaseImpl>(moviesUseCaseImpl) {
 
     var moviesMutable: MutableLiveData<List<MovieView>> = MutableLiveData()
 
